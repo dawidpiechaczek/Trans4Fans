@@ -1,0 +1,33 @@
+ext.deps = [:]
+def versions = [:]
+versions.android_plugin = '7.0.4'
+versions.appcompat = '1.4.1'
+versions.constraint_layout = '2.0.4'
+versions.coordinator_layout = '1.1.0'
+versions.core_ktx = '1.3.2'
+versions.espresso = '3.3.0'
+versions.junit = '4.13.2'
+versions.junit_ext = '1.1.2'
+versions.kotlin_gradle_plugin = '1.6.10'
+versions.material = '1.5.0'
+versions.recycler_view = '1.2.1'
+versions.splash_screen = '1.0.0-beta01'
+
+deps.android_plugin = "com.android.tools.build:gradle:$versions.android_plugin"
+deps.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
+deps.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin_gradle_plugin"
+
+def android_ui = [:]
+android_ui.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
+android_ui.constraint_layout = "androidx.constraintlayout:constraintlayout:$versions.constraint_layout"
+android_ui.coordinator_layout = "androidx.coordinatorlayout:coordinatorlayout:$versions.coordinator_layout"
+android_ui.material = "com.google.android.material:material:$versions.material"
+android_ui.recycler_view = "androidx.recyclerview:recyclerview:$versions.recycler_view"
+android_ui.splash_screen = "androidx.core:core-splashscreen:$versions.splash_screen"
+deps.android_ui = android_ui
+
+def test = [:]
+test.junit = "junit:junit:$versions.junit"
+test.junit_ext = "androidx.test.ext:junit:$versions.junit_ext"
+test.espresso = "androidx.test.espresso:espresso-core:$versions.espresso"
+deps.test = test
