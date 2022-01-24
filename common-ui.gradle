@@ -1,0 +1,31 @@
+apply plugin: 'kotlin-android'
+apply from: "$rootDir/common.gradle"
+
+android {
+    compileSdk 31
+    defaultConfig {
+        minSdk 26
+        targetSdk 31
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation deps.android_ui.constraint_layout
+    implementation deps.android_ui.coordinator_layout
+    implementation deps.android_ui.material
+    implementation deps.android_ui.recycler_view
+
+    androidTestImplementation deps.test.junit_ext
+    androidTestImplementation deps.test.espresso
+}

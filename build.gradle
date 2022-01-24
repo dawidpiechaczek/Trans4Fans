@@ -1,5 +1,5 @@
 buildscript {
-    apply from: 'versions.gradle'
+    apply from: "$rootDir/versions.gradle"
     repositories {
         google()
         mavenCentral()
@@ -7,6 +7,7 @@ buildscript {
     dependencies {
         classpath deps.android_plugin
         classpath deps.kotlin_gradle_plugin
+        classpath deps.hilt.plugin
     }
 }
 

@@ -1,0 +1,13 @@
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation deps.core_ktx
+    implementation deps.android_ui.appcompat
+    implementation deps.android_ui.splash_screen
+
+    implementation deps.hilt.android
+    implementation deps.hilt.navigation
+    kapt deps.hilt.compiler
+
+    testImplementation deps.test.junit
+}

@@ -1,0 +1,7 @@
+apply plugin: 'com.android.library'
+apply from: "$rootDir/common-ui.gradle"
+
+dependencies {
+    api project(':app')
+    implementation project(':auth:data')
+}

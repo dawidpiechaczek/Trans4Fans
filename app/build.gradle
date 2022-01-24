@@ -1,47 +1,17 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
 }
+apply from: "$rootDir/common-ui.gradle"
 
 android {
-    compileSdk 31
-
     defaultConfig {
         applicationId "com.appsirise.trans4fans"
-        minSdk 26
-        targetSdk 31
-        versionCode 100
-        versionName "1.0.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-}
-
-dependencies {
-    implementation deps.core_ktx
-    implementation deps.android_ui.appcompat
-    implementation deps.android_ui.constraint_layout
-    implementation deps.android_ui.coordinator_layout
-    implementation deps.android_ui.material
-    implementation deps.android_ui.recycler_view
-    implementation deps.android_ui.splash_screen
-
-    testImplementation deps.test.junit
-
-    androidTestImplementation deps.test.junit_ext
-    androidTestImplementation deps.test.espresso
 }
