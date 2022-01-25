@@ -1,7 +1,4 @@
-plugins {
-    id 'com.android.application'
-    id 'dagger.hilt.android.plugin'
-}
+apply plugin: 'com.android.application'
 apply from: "$rootDir/common-ui.gradle"
 
 android {
@@ -17,5 +14,6 @@ android {
 }
 
 dependencies {
-    api project(':auth:ui')
+    implementation project(':core:ui')
+    implementation project(':auth:ui')
 }

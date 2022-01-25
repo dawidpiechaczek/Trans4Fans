@@ -1,4 +1,4 @@
-package com.appsirise.trans4fans
+package com.appsirise.core.ui
 
 import android.os.Bundle
 import androidx.annotation.CallSuper

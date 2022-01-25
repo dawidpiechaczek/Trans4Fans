@@ -1,4 +1,4 @@
-package com.appsirise.trans4fans.auth.data
+package com.appsirise.core.ui
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

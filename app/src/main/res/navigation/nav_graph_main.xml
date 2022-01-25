@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nav_graph_main">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/dashboardFragment">
 
+    <include app:graph="@navigation/nav_graph_auth" />
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.appsirise.trans4fans.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_nav_graph_auth"
+            app:destination="@id/nav_graph_auth" />
+    </fragment>
 </navigation>

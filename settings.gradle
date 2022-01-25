@@ -10,3 +10,5 @@ rootProject.name = "Trans4Fans"
 include ':app'
 include ':auth:data'
 include ':auth:ui'
+include ':core:ui'
+include ':core:data'

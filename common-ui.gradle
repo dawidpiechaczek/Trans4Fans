@@ -1,4 +1,6 @@
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 apply from: "$rootDir/common.gradle"
 
 android {
@@ -18,6 +20,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    packagingOptions {
+        pickFirst '**'
+    }
     buildFeatures {
         viewBinding true
     }
@@ -31,9 +36,15 @@ dependencies {
     implementation deps.android_ui.recycler_view
     implementation deps.android_ui.splash_screen
 
+    implementation deps.fragment.fragment
+    implementation deps.fragment.ktx
+    testImplementation deps.fragment.test
+
     implementation deps.hilt.navigation
     implementation deps.hilt.android
     kapt deps.hilt.compiler
+
+    implementation deps.ktlint
 
     implementation deps.navigation.frgament
     implementation deps.navigation.ui
