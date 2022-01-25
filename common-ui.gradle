@@ -18,13 +18,25 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    implementation deps.android_ui.appcompat
     implementation deps.android_ui.constraint_layout
     implementation deps.android_ui.coordinator_layout
     implementation deps.android_ui.material
     implementation deps.android_ui.recycler_view
+    implementation deps.android_ui.splash_screen
+
+    implementation deps.hilt.navigation
+    implementation deps.hilt.android
+    kapt deps.hilt.compiler
+
+    implementation deps.navigation.frgament
+    implementation deps.navigation.ui
 
     androidTestImplementation deps.test.junit_ext
     androidTestImplementation deps.test.espresso

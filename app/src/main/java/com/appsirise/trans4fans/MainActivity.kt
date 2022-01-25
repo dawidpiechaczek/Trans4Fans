@@ -1,5 +1,8 @@
 package com.appsirise.trans4fans
 
-import androidx.appcompat.app.AppCompatActivity
+import com.appsirise.trans4fans.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity()
+class MainActivity : BaseActivity<ActivityMainBinding>(){
+
+    override fun setBinding() = ActivityMainBinding.inflate(layoutInflater)
+}

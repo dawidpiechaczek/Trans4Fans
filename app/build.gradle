@@ -15,3 +15,7 @@ android {
         }
     }
 }
+
+dependencies {
+    api project(':auth:ui')
+}

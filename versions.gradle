@@ -13,6 +13,7 @@ versions.junit = '4.13.2'
 versions.junit_ext = '1.1.2'
 versions.kotlin_gradle_plugin = '1.6.10'
 versions.material = '1.5.0'
+versions.navigation = '2.3.5'
 versions.recycler_view = '1.2.1'
 versions.splash_screen = '1.0.0-beta01'
 
@@ -35,6 +36,11 @@ hilt.android = "com.google.dagger:hilt-android:$versions.hilt"
 hilt.compiler = "com.google.dagger:hilt-android-compiler:$versions.hilt"
 hilt.navigation = "androidx.hilt:hilt-navigation-fragment:$versions.hilt_navigation"
 deps.hilt = hilt
+
+def navigation = [:]
+navigation.frgament = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.ui = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+deps.navigation = navigation
 
 def test = [:]
 test.junit = "junit:junit:$versions.junit"
