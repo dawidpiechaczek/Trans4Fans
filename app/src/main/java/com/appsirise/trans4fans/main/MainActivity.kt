@@ -1,4 +1,4 @@
-package com.appsirise.trans4fans
+package com.appsirise.trans4fans.main
 
 import com.appsirise.core.ui.BaseActivity
 import com.appsirise.trans4fans.databinding.ActivityMainBinding
