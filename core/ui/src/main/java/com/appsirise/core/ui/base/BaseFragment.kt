@@ -1,4 +1,4 @@
-package com.appsirise.core.ui
+package com.appsirise.core.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.annotation.CallSuper
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.appsirise.core.ui.extensions.clearOnViewDestroy
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 

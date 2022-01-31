@@ -3,7 +3,7 @@ package com.appsirise.trans4fans
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.appsirise.core.ui.BaseFragment
+import com.appsirise.core.ui.base.BaseFragment
 import com.appsirise.trans4fans.databinding.FragmentDashboardBinding
 
 class DashboardFragment : BaseFragment<FragmentDashboardBinding>() {

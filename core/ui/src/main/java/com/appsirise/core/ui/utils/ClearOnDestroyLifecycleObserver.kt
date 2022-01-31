@@ -1,4 +1,4 @@
-package com.appsirise.core.ui
+package com.appsirise.core.ui.utils
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle

@@ -1,2 +1,13 @@
 apply plugin: 'kotlin'
 apply from: "$rootDir/common.gradle"
+
+dependencies {
+    api deps.network.moshi
+    api deps.network.moshi_kotlin
+    api deps.network.retrofit
+    api deps.network.retrofit_moshi
+    api deps.network.okhttp
+    api deps.network.okhttp_logger
+    api deps.facebook.stetho
+    api deps.facebook.stetho_interceptor
+}

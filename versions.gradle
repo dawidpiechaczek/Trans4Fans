@@ -15,9 +15,14 @@ versions.junit_ext = '1.1.2'
 versions.kotlin_gradle_plugin = '1.6.10'
 versions.ktlint = '0.43.2'
 versions.material = '1.5.0'
+versions.moshi = '1.12.0'
 versions.navigation = '2.3.5'
+versions.okhttp = '4.9.1'
+versions.recycler_view = '1.2.1'
+versions.retrofit = '2.9.0'
 versions.recycler_view = '1.2.1'
 versions.splash_screen = '1.0.0-beta01'
+versions.stetho = '1.5.1'
 
 deps.android_plugin = "com.android.tools.build:gradle:$versions.android_plugin"
 deps.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
@@ -32,6 +37,11 @@ android_ui.material = "com.google.android.material:material:$versions.material"
 android_ui.recycler_view = "androidx.recyclerview:recyclerview:$versions.recycler_view"
 android_ui.splash_screen = "androidx.core:core-splashscreen:$versions.splash_screen"
 deps.android_ui = android_ui
+
+def facebook = [:]
+facebook.stetho = "com.facebook.stetho:stetho:$versions.stetho"
+facebook.stetho_interceptor = "com.facebook.stetho:stetho-okhttp3:$versions.stetho"
+deps.facebook = facebook
 
 def fragment = [:]
 fragment.fragment = "androidx.fragment:fragment:$versions.fragment"
@@ -52,8 +62,19 @@ navigation.ui = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
 navigation.safe_args_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigation"
 deps.navigation = navigation
 
+def network = [:]
+network.moshi = "com.squareup.moshi:moshi:$versions.moshi"
+network.moshi_kotlin = "com.squareup.moshi:moshi-kotlin:$versions.moshi"
+network.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+network.retrofit_moshi = "com.squareup.retrofit2:converter-moshi:$versions.retrofit"
+network.okhttp = "com.squareup.okhttp3:okhttp:$versions.okhttp"
+network.okhttp_logger = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+deps.network = network
+
 def test = [:]
 test.junit = "junit:junit:$versions.junit"
 test.junit_ext = "androidx.test.ext:junit:$versions.junit_ext"
 test.espresso = "androidx.test.espresso:espresso-core:$versions.espresso"
 deps.test = test
+
+deps.timber = "com.jakewharton.timber:timber:$versions.timber"

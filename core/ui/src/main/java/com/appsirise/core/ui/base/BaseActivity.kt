@@ -1,4 +1,4 @@
-package com.appsirise.core.ui
+package com.appsirise.core.ui.base
 
 import android.os.Bundle
 import androidx.annotation.CallSuper
