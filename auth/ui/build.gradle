@@ -3,5 +3,5 @@ apply from: "$rootDir/common-ui.gradle"
 
 dependencies {
     implementation project(':core:ui')
-    implementation project(':auth:data')
+    api project(':auth:data')
 }

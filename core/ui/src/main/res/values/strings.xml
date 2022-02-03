@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_no_internet_connection">No internet connection</string>
+    <string name="error_timeout">Timeout error occurred</string>
+    <string name="error_missing_data">Data has unexpected format</string>
+    <string name="error_security">Security error occurred</string>
+    <string name="error_unknown">Unknown error occurred</string>
+    <string name="error_http_500">Internal server error occurred</string>
+    <string name="error_http_404">Error not found occurred</string>
+    <string name="error_http_401">Unauthorised action</string>
+    <string name="error_http_unknown">Unknown http error</string>
+</resources>

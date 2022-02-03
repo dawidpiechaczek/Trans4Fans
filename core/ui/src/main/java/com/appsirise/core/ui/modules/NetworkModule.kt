@@ -5,7 +5,6 @@ import com.appsirise.core.ui.BuildConfig
 import com.appsirise.core.ui.qualifier.Auth
 import com.appsirise.core.ui.qualifier.Main
 import com.appsirise.core.ui.utils.LocalDateAdapter
-import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -54,12 +53,12 @@ class NetworkModule {
     @Provides
     fun provideMainOkHttpClient(
         httpLoggingInterceptor: HttpLoggingInterceptor,
-        stethoInterceptor: StethoInterceptor,
+    //    stethoInterceptor: StethoInterceptor,
         cache: Cache
     ): OkHttpClient {
         val builder = OkHttpClient.Builder()
             .addNetworkInterceptor(httpLoggingInterceptor)
-            .addNetworkInterceptor(stethoInterceptor)
+     //       .addNetworkInterceptor(stethoInterceptor)
             .cache(cache)
 
         return builder.build()
@@ -68,10 +67,10 @@ class NetworkModule {
     @Auth
     @Provides
     fun provideAuthOkHttpClient(
-        stethoInterceptor: StethoInterceptor,
+       // stethoInterceptor: StethoInterceptor,
         httpLoggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient = OkHttpClient.Builder()
-        .addNetworkInterceptor(stethoInterceptor)
+      //  .addNetworkInterceptor(stethoInterceptor)
         .addNetworkInterceptor(httpLoggingInterceptor)
         .build()
 
@@ -97,15 +96,8 @@ class NetworkModule {
         .addConverterFactory(moshiConverterFactory)
         .build()
 
-/* API */
-
-   /* @Main
-    @Provides
-    fun provideExampleApi(@Main retrofit: Retrofit): ExampleApi =
-        retrofit.create()*/
-
     companion object {
-        private const val BASE_API_URL = ""
+        private const val BASE_API_URL = "https://api.thedogapi.com"
         private const val CACHE_SIZE_BYTES = 1024 * 1024 * 2L
     }
 }
