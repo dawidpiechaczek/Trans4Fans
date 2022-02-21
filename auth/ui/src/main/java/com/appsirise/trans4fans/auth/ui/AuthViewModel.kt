@@ -10,6 +10,7 @@ import com.appsirise.trans4fans.auth.data.DogBreed
 import com.appsirise.trans4fans.auth.ui.repository.ExampleRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,7 +27,7 @@ class AuthViewModel @Inject constructor(
                 _getBreedsLiveData.value =
                     ViewState.Success(exampleRepository.getDogBreeds())
             } catch (error: Exception) {
-               // Timber.e(error)
+                Timber.e(error)
                 _getBreedsLiveData.value =
                     ViewState.Error(ErrorMessageHelper(error).getMessageStringId())
             }

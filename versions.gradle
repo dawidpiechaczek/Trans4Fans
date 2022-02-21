@@ -23,6 +23,7 @@ versions.retrofit = '2.9.0'
 versions.recycler_view = '1.2.1'
 versions.splash_screen = '1.0.0-beta01'
 versions.stetho = '1.5.1'
+versions.timber = '4.7.1'
 
 deps.android_plugin = "com.android.tools.build:gradle:$versions.android_plugin"
 deps.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
