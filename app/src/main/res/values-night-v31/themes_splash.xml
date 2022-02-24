@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App.Launcher" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenBackground">@color/purple_200</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <item name="postSplashScreenTheme">@style/Theme.Trans4Fans</item>
+    </style>
+</resources>
