@@ -11,7 +11,7 @@ import retrofit2.create
 
 @Module
 @InstallIn(SingletonComponent::class)
-class AuthModule {
+internal class AuthModule {
 
 /* API */
 

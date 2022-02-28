@@ -6,7 +6,7 @@ import com.appsirise.trans4fans.auth.data.DogBreed
 import com.appsirise.trans4fans.auth.data.ExampleApi
 import javax.inject.Inject
 
-class ExampleRepository @Inject constructor(
+internal class ExampleRepository @Inject constructor(
     @Main private val exampleApi: ExampleApi
 ) : ExampleSource {
 
