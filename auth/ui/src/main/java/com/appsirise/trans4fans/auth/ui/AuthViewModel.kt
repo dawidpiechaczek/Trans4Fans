@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.appsirise.core.ui.utils.ErrorMessageHelper
 import com.appsirise.core.ui.utils.ViewState
-import com.appsirise.trans4fans.auth.data.DogBreed
-import com.appsirise.trans4fans.auth.ui.repository.ExampleRepository
+import com.appsirise.trans4fans.auth.data.model.DogBreed
+import com.appsirise.trans4fans.auth.ui.usecase.GetDogBreedsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 internal class AuthViewModel @Inject constructor(
-    private val exampleRepository: ExampleRepository,
+    private val getDogBreedsUseCase: GetDogBreedsUseCase,
 ) : ViewModel() {
 
     private val _getBreedsLiveData = MutableLiveData<ViewState<List<DogBreed>>>()
@@ -25,7 +25,7 @@ internal class AuthViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _getBreedsLiveData.value =
-                    ViewState.Success(exampleRepository.getDogBreeds())
+                    ViewState.Success(getDogBreedsUseCase.execute(Unit))
             } catch (error: Exception) {
                 Timber.e(error)
                 _getBreedsLiveData.value =

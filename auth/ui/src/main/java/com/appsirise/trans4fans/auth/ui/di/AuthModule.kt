@@ -1,7 +1,7 @@
 package com.appsirise.trans4fans.auth.ui.di
 
 import com.appsirise.core.ui.qualifier.Main
-import com.appsirise.trans4fans.auth.data.ExampleApi
+import com.appsirise.trans4fans.auth.data.network.ExampleApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,8 +15,7 @@ internal class AuthModule {
 
 /* API */
 
-     @Main
-     @Provides
-     fun provideExampleApi(@Main retrofit: Retrofit): ExampleApi = retrofit.create()
-
+    @Main
+    @Provides
+    fun provideExampleApi(@Main retrofit: Retrofit): ExampleApi = retrofit.create()
 }

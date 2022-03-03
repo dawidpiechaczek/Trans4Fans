@@ -4,7 +4,6 @@ import androidx.annotation.StringRes
 import com.appsirise.core.ui.R
 import com.squareup.moshi.JsonDataException
 import retrofit2.HttpException
-import java.io.IOException
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException

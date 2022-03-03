@@ -1,4 +1,4 @@
-package com.appsirise.trans4fans.auth.data
+package com.appsirise.trans4fans.auth.data.model
 
 import com.squareup.moshi.Json
 

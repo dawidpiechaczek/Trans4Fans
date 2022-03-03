@@ -2,7 +2,10 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
     implementation deps.core_ktx
+    implementation deps.coroutines.android
+    implementation deps.coroutines.test
     implementation deps.timber
 
     testImplementation deps.test.junit
+    testImplementation deps.test.mockk
 }

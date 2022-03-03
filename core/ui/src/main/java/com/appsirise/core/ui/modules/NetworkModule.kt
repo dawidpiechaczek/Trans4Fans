@@ -53,12 +53,12 @@ class NetworkModule {
     @Provides
     fun provideMainOkHttpClient(
         httpLoggingInterceptor: HttpLoggingInterceptor,
-    //    stethoInterceptor: StethoInterceptor,
+        //    stethoInterceptor: StethoInterceptor,
         cache: Cache
     ): OkHttpClient {
         val builder = OkHttpClient.Builder()
             .addNetworkInterceptor(httpLoggingInterceptor)
-     //       .addNetworkInterceptor(stethoInterceptor)
+            //       .addNetworkInterceptor(stethoInterceptor)
             .cache(cache)
 
         return builder.build()
@@ -67,10 +67,10 @@ class NetworkModule {
     @Auth
     @Provides
     fun provideAuthOkHttpClient(
-       // stethoInterceptor: StethoInterceptor,
+        // stethoInterceptor: StethoInterceptor,
         httpLoggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient = OkHttpClient.Builder()
-      //  .addNetworkInterceptor(stethoInterceptor)
+        //  .addNetworkInterceptor(stethoInterceptor)
         .addNetworkInterceptor(httpLoggingInterceptor)
         .build()
 
