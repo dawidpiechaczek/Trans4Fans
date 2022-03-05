@@ -6,6 +6,7 @@ dependencies {
     implementation deps.coroutines.test
     implementation deps.timber
 
+    testImplementation deps.test.arch
     testImplementation deps.test.junit
     testImplementation deps.test.mockk
 }
