@@ -4,4 +4,6 @@ apply from: "$rootDir/common-ui.gradle"
 dependencies {
     implementation project(':core:ui')
     api project(':auth:data')
+
+    testImplementation(testFixtures(project(":core:ui")))
 }

@@ -1,4 +1,4 @@
-package com.appsirise.trans4fans.auth.ui
+package com.appsirise.core.ui
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.TestScope

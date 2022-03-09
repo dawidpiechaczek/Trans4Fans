@@ -30,6 +30,9 @@ android {
     buildFeatures {
         viewBinding true
     }
+    testFixtures {
+        enable true
+    }
 }
 
 dependencies {

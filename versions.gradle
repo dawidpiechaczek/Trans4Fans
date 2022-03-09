@@ -1,7 +1,7 @@
 ext.deps = [:]
 
 def versions = [:]
-versions.android_plugin = '7.0.4'
+versions.android_plugin = '7.2.0-beta03'
 versions.appcompat = '1.4.1'
 versions.arch = '2.1.0'
 versions.constraint_layout = '2.0.4'
