@@ -29,7 +29,11 @@ class SignUpFragment : BaseFragment<FragmentSignupBinding>() {
                     it.errorMessage,
                     Toast.LENGTH_SHORT
                 ).show()
-                is ViewState.Success -> binding.listItems.text = it.toString()
+                is ViewState.Success -> Toast.makeText(
+                    requireContext(),
+                    it.toString(),
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }

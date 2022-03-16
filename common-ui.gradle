@@ -58,4 +58,6 @@ dependencies {
 
     androidTestImplementation deps.test.junit_ext
     androidTestImplementation deps.test.espresso
+
+    debugImplementation deps.leak_canary
 }
